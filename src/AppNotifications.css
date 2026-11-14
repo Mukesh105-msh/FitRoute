@@ -1,0 +1,240 @@
+
+.header-popover-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fitroute-popover {
+  position: absolute;
+  top: calc(100% + 15px);
+  right: 0;
+  z-index: 200;
+  width: min(360px, calc(100vw - 28px));
+  overflow: hidden;
+  border: 1px solid #eadbca;
+  border-radius: 18px;
+  background: #fffdfa;
+  box-shadow: 0 18px 50px rgba(55, 33, 18, .18);
+  color: #40291d;
+}
+
+.popover-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 18px 14px;
+  border-bottom: 1px solid #f0e5d9;
+}
+
+.popover-heading strong {
+  display: block;
+  font: 700 17px Georgia, serif;
+}
+
+.popover-heading small,
+.profile-summary small {
+  display: block;
+  margin-top: 5px;
+  color: #927b68;
+  font-size: 11px;
+}
+
+.popover-heading > button {
+  border: 0;
+  background: transparent;
+  color: #a56820;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.notification-list {
+  max-height: 330px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 15px 17px;
+  border: 0;
+  border-bottom: 1px solid #f4ece3;
+  background: #fffaf3;
+  text-align: left;
+  cursor: pointer;
+}
+
+.notification-item.is-read {
+  background: #fff;
+}
+
+.notification-item-icon {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: #f8ead8;
+  color: #a56820;
+}
+
+.notification-item-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.notification-item-copy strong {
+  display: block;
+  color: #422b1d;
+  font-size: 12px;
+}
+
+.notification-item-copy small {
+  display: block;
+  margin-top: 5px;
+  color: #806d5e;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.notification-item-copy .notification-time {
+  color: #ae8c6b;
+  font-size: 10px;
+}
+
+.unread-indicator {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #bc7a27;
+}
+
+.popover-empty {
+  padding: 24px 18px;
+  color: #806d5e;
+  font-size: 13px;
+  text-align: center;
+}
+
+.profile-popover {
+  width: min(300px, calc(100vw - 28px));
+  padding: 17px;
+}
+
+.profile-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0e5d9;
+}
+
+.profile-avatar {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f6e6d2;
+  color: #925617;
+}
+
+.profile-summary strong {
+  display: block;
+  max-width: 205px;
+  overflow: hidden;
+  color: #40291d;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-summary small {
+  max-width: 205px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 2px;
+  color: #7c694f;
+  font-size: 11px;
+}
+
+.profile-status svg {
+  color: #8b9b57;
+}
+
+.profile-edit-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 13px;
+  margin-bottom: 8px;
+  border: 1px solid #d5cbc0;
+  border-radius: 10px;
+  background: #faf8f5;
+  color: #3c2415;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.profile-edit-btn:hover {
+  background: #f0ebe3;
+  border-color: #b8975a;
+}
+
+.profile-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 13px;
+  border: 1px solid #ead9c8;
+  border-radius: 10px;
+  background: #fff8ef;
+  color: #8b4c16;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profile-logout:hover {
+  background: #f8ead8;
+}
+
+@media (max-width: 560px) {
+  .fitroute-popover {
+    position: fixed;
+    top: 82px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: calc(100vw - 24px);
+    box-shadow: 0 16px 45px rgba(50, 30, 18, 0.22);
+  }
+
+  .profile-popover {
+    position: fixed;
+    top: 82px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-width: calc(100vw - 24px);
+  }
+}
